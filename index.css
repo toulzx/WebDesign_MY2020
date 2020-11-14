@@ -50,6 +50,14 @@ body {
     margin: 0;
     padding: 0;
     border: 4px solid burlywood;
+}    
+#welcomePage .fp-tableCell
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+
 }
 #waterfallPage {
     margin: 0;
@@ -60,12 +68,230 @@ body {
     margin: 0;
     padding: 0;
     border: 3px dashed chartreuse;
+    
 }
+/*用了插件之后就会有这个类名的容器在section类的内部*/
+#detailsPage .fp-tableCell
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
 
-
-
-
-
+}
+.bookDetail
+{
+    height: 170px;
+    width: 70%;
+    background-color: aqua;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /*这一行讲道理没什么用处，没什么用就删了吧*/
+    visibility: hidden;
+}
+/*以下是左侧的书*/
+.leftBook .picture
+{
+    z-index: 3;
+    position: absolute;
+    height: 80%;
+    width: 15%;
+    left: 14%;
+    animation: rotateBackLeft 2s;
+}
+.leftBook .picture img
+{
+    height:100%;
+    width: 100%;
+}
+@keyframes rotateBackLeft
+{
+   0% {transform:rotate(-40deg);}
+   55% {transform: rotate(-40deg);}
+   100% {transform: rotate(0deg);}
+}
+.leftBook .pictureContainer
+{
+    height: 90%;
+    width: 30%;
+    background-color: aquamarine;
+    z-index: 2;
+    position: absolute;
+    animation: leftFromLeft linear 2s;
+}
+@keyframes leftFromLeft
+{
+    0% {left: -52%;}
+    100% {left:0;}
+}
+.leftBook .contentContainer
+{
+    height: 95%;
+    width: 90%;
+    z-index: 1;
+    background-color: bisque;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: leftFromRight linear 2s;
+}
+@keyframes leftFromRight
+{
+    0% {right:-112%}
+    100%{right:0}
+}
+.leftBook .title
+{
+    /*position: absolute;*/
+    font-size: 40px;
+    font-weight: bolder;
+    animation: leftFadeInTitle 3s;
+}
+@keyframes leftFadeInTitle
+{
+    0%{opacity: 0;transform: translateX(0);}
+    83%{opacity: 0;transform: translateX(-20px);}
+    100%{opacity: 1;}
+}
+.leftBook .divideLine
+{
+  /*position: absolute;*/
+   width: 100px;
+   height: 4px;
+   background-color:blueviolet ;
+   /*border: 2px solid cornflowerblue;*/
+   animation: leftFadeInLine 3.5s;
+}
+@keyframes leftFadeInLine
+{
+    0%{width: 0;}
+    85.7%{width: 0;}
+    100%{width: 100px;}
+}
+.leftBook .content
+{
+    /*position: absolute;*/
+    font-size: 25px;
+    width: 30%;
+    height: 40%;
+    word-break: break-all;
+    animation: leftFadeInContent 4s
+}
+@keyframes leftFadeInContent
+{
+    0%{opacity: 0;transform: translateX(0px);}
+    87.5%{opacity: 0;transform: translateX(-20px);}
+    100%{opacity: 1;}
+}
+/*以下是右侧的书*/
+.rightBook .picture
+{
+    z-index: 3;
+    position: absolute;
+    height: 80%;
+    width: 15%;
+    right: 14%;
+    animation: rotateBackRight 6s;
+}
+.rightBook .picture img
+{
+    height:100%;
+    width: 100%;
+}
+@keyframes rotateBackRight
+{
+   0% {transform:rotate(40deg);}
+   85% {transform: rotate(40deg);}
+   100% {transform: rotate(0deg);}
+}
+.rightBook .pictureContainer
+{
+    height: 90%;
+    width: 30%;
+    background-color: aquamarine;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    animation: rightFromRight linear 6s;
+}
+@keyframes rightFromRight
+{
+    0% {right: -52%;}
+    67%{right: -52%;}
+    100% {right:0;}
+}
+.rightBook .contentContainer
+{
+    height: 95%;
+    width: 90%;
+    z-index: 1;
+    background-color: bisque;
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: rightFromLeft linear 6s;
+}
+@keyframes rightFromLeft
+{
+    0% {left:-112%}
+    67%{left:-112%}
+    100%{left:0}
+}
+.rightBook .title
+{
+    /*position: absolute;*/
+    font-size: 40px;
+    font-weight: bolder;
+    animation: rightFadeInTitle 7s;
+}
+@keyframes rightFadeInTitle
+{
+    0%{opacity: 0;transform: translateX(0);}
+    57%{opacity: 0;transform: translateX(0);}
+    93%{opacity: 0;transform: translateX(-20px);}
+    100%{opacity: 1;}
+}
+.rightBook .divideLine
+{
+  /*position: absolute;*/
+   width: 100px;
+   height: 4px;
+   background-color:blueviolet ;
+   /*border: 2px solid cornflowerblue;*/
+   animation: rightFadeInLine 7.5s;
+}
+@keyframes rightFadeInLine
+{
+    0%{width: 0;}
+    93%{width: 0;}
+    100%{width: 100px;}
+}
+.rightBook .content
+{
+    /*position: absolute;*/
+    font-size: 25px;
+    width: 30%;
+    height: 40%;
+    word-break: break-all;
+    animation: rightFadeInContent 8s
+}
+@keyframes rightFadeInContent
+{
+    0%{opacity: 0;transform: translateX(0px);}
+    50%{opacity: 0;transform: translateX(0px);}
+    93.75%{opacity: 0;transform: translateX(-20px);}
+    100%{opacity: 1;}
+}
 
 footer {
     box-sizing: border-box;
