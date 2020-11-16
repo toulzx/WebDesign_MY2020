@@ -5,132 +5,129 @@
     <meta name="copyright" content="NJUPT16#212"></meta>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0"></meta>
 
-    <title>我的2020 欢迎光临</title>
-    <script src="./jquery-3.4.1.min.js" type=""></script>
-    <head><link rel="stylesheet" type="text/css" href="index.css"></link>
+    <title>MY 2020</title>
+    
+    <link rel="stylesheet" type="text/css" href="index.css"></link>
     <link rel="stylesheet" type="text/css" href="../node_modules/fullpage.js/dist/fullpage.css"></link>
-    <script src="../node_modules/fullpage.js/dist/fullpage.js"></script>
-   
-    </head>
-
-    
-
-    
+    <link rel="stylesheet" type="text/css" href="animeCSS/flipInX.css"></link>
+    <link rel="stylesheet" type="text/css" href="animeCSS/hitLeft.css"></link>
+    <link rel="stylesheet" type="text/css" href="animeCSS/perspectiveLeft.css"></link>
+    <link rel="stylesheet" type="text/css" href="animeCSS/rotateLeft.css"></link>
+    <link rel="stylesheet" type="text/css" href="animeCSS/spaceOut.css"></link>
+    <link rel="stylesheet" type="text/css" href="animeCSS/spinIn.css"></link>
+    <link rel="stylesheet" type="text/css" href="animeCSS/vanishOut.css"></link>
+</head>
 
     <html>
         <body>
+            <script src="./jquery-3.4.1.min.js" type=""></script>
             <header id="navBar">
-                <span id="navLeft">Welcome to My 2020</span>
+                <span id="navLeft">My 2020</span>
+                <!-- <span id="copyRight">CopyRight 2020 VanPCA,HuaCL,Tou</span> -->
                 <!-- 👇当向下滑动显示navParts，反之显示navTop -->
                 <div id="navParts">
-                    <span>[welcome]</span>
-                    <span>[waterfall]</span>
-                    <span>[details]</span>
+                    <!-- <a href="#waterfallPage">瀑布流 </a> -->
+                    <!-- <a href="#detailsPage">阅读 </a> -->
+                    <a href="#welcomePage" onclick=" window.location.reload()">Back to top</a>
                 </div>
                 <!-- <div id="navTop">BackToTop</div> -->
             </header>
             <div id="container">
-             <div id="welcomePage" class="section">
-                 
-             </div>
+                <div id="welcomePage" class="section"><img src="HOME_2020.gif" id="HOME_2020"></div>
 
-            <div id="waterfallPage" class="section"></div>
-              
-            <!--我要做的-->
-            <div id="detailsPage" class="section">
-                <!--第一本书-->
-                <div class="bookDetail leftBook" id="book1">
-                    <!--图片-->
-                    <!--取名漏一个字符是为了函数里重新赋值，可以改成其他好看点的名字-->
-                    <div class="pictur">
-                        <img src="./pics/love.jpg" alt="">
+                <div id="waterfallPage" class="section"></div>
+                
+                <!--我要做的-->
+                <div id="detailsPage" class="section">
+                    <img class="whiteBackground" src="whiteBackground.png">
+                    <div class="bookDetail leftBook" id="book1">
+                        <!--图片--> <!-- 凡是大写开头的clssname都是为了动画显示时替换掉 -->
+                        <div class="Picture"><img src="bookCover/Alive.jpg" alt=""></div>
+                        <!--图片的背景部分-->
+                        <div class="PictureBackground"><div class="Pic"></div></div>
+
+                        <!--描述的部分-->
+                        <div class="ContentContainer">
+                            <!--标题-->
+                            <div class="Title">
+                                <div class="Content"></div>
+                                <img src="bookCover/AliveDetail.png">
+                            </div>
+                            <!--分割线-->
+                            <!-- <div class="DivideLine"></div> -->
+                            <!--实际内容-->
+                            
+                        </div>
                     </div>
-                    <!--图片的背景部分-->
-                    <div class="pictureContaine">
-                      
+                    <div class="bookDetail rightBook" id="book2">
+                        <div class="Picture"><img src="bookCover/BadChild.jpg" alt=""></div>
+                        <!--图片的背景部分-->
+                        <div class="PictureBackground"><div class="Pic"></div></div>
+
+                        <!--描述的部分-->
+                        <div class="ContentContainer">
+                            <!--标题-->
+                            <div class="Title">
+                                <img src="bookCover/BadChildDetail.png">
+                                <div class="Content"></div>
+                            </div>
+                            <!--分割线-->
+                            <!-- <div class="DivideLine"></div> -->
+                            <!--实际内容-->
+                            
+                        </div>
                     </div>
-                    <!--描述的部分-->
-                    <div class="contentContaine">
-                        <!--标题-->
-                        <div class="titl"><sapn>标题</sapn></div>
-                        <!--分割线-->
-                        <div class="divideLin"></div>
-                        <!--实际内容-->
-                        <div class="conten">cxcscsacaczcacasacsasasfsafsacxcsacsas</div>
+                </div>
+                <!--我要做的-->
+                <div id="detailsPage2" class="section">
+                    <img class="whiteBackground" src="whiteBackground.png">
+                    <div class="bookDetail2 leftBook" id="book3">
+                        <!--图片--> <!-- 凡是大写开头的clssname都是为了动画显示时替换掉 -->
+                        <div class="Picture2"><img src="bookCover/IntimateRelationship.jpg" alt=""></div>
+                        <!--图片的背景部分-->
+                        <div class="PictureBackground2"><div class="Pic2"></div></div>
+                        <!--描述的部分-->
+                        <div class="ContentContainer2">
+                            <!--标题-->
+                            <div class="Title2">
+                                <div class="Content2"></div>
+                                <img src="bookCover/IntimateRelationshipDetail.png">
+                            </div>
+                            <!--分割线-->
+                            <!-- <div class="DivideLine2"></div> -->
+                        </div>
                     </div>
-             </div>
+                    <div class="bookDetail2 rightBook" id="book4">
+                        <div class="Picture2"><img src="bookCover/TheKiteRunner.jpg" alt=""></div>
+                        <!--图片的背景部分-->
+                        <div class="PictureBackground2"><div class="Pic2"></div></div>
 
-               <!--第二本书-->
-             <div class="bookDetail rightBook" id="book2">
-                <!--图片-->
-                <div class="pictur">
-                    <img src="./pics/love.jpg" alt="">
+                        <!--描述的部分-->
+                        <div class="ContentContainer2">
+                            <!--标题-->
+                            <div class="Title2">
+                                <img src="bookCover/TheKiteRunnerDetail.png">
+                                <div class="Content2"></div>
+                            </div>
+                            <!--分割线-->
+                            <!-- <div class="DivideLine2"></div> -->
+                            <!--实际内容-->
+                        </div>
+                    </div>
                 </div>
-                <!--图片的背景部分-->
-                <div class="pictureContaine">
-                  
-                </div>
-                <!--描述的部分-->
-                <div class="contentContaine">
-                    <!--标题-->
-                    <div class="titl"><sapn>标题</sapn></div>
-                    <!--分割线-->
-                    <div class="divideLin"></div>
-                    <!--实际内容-->
-                    <div class="conten">cxcscsacaczcacasacsasasfsafsacxcsacsas</div>
-                </div>
-         </div>
-
-         <!--第三本书-->
-         <div class="bookDetail leftBook" id="book3">
-            <!--图片-->
-            <div class="pictur">
-                <img src="./pics/love.jpg" alt="">
-            </div>
-            <!--图片的背景部分-->
-            <div class="pictureContaine">
-              
-            </div>
-            <!--描述的部分-->
-            <div class="contentContaine">
-                <!--标题-->
-                <div class="titl"><sapn>标题</sapn></div>
-                <!--分割线-->
-                <div class="divideLin"></div>
-                <!--实际内容-->
-                <div class="conten">cxcscsacaczcacasacsasasfsafsacxcsacsas</div>
-            </div>
-     </div>
-
-     <!--第四本书-->
-     <div class="bookDetail rightBook" id="book4">
-        <!--图片-->
-        <div class="pictur">
-            <img src="./pics/love.jpg" alt="">
-        </div>
-        <!--图片的背景部分-->
-        <div class="pictureContaine">
-          
-        </div>
-        <!--描述的部分-->
-        <div class="contentContaine">
-            <!--标题-->
-            <div class="titl"><sapn>标题</sapn></div>
-            <!--分割线-->
-            <div class="divideLin"></div>
-            <!--实际内容-->
-            <div class="conten">cxcscsacaczcacasacsasasfsafsacxcsacsas</div>
-        </div>
- </div>
-                </div>
-            
+                
+                <footer class="section">
+                    <img class="whiteBackground" src="whiteBackground.png">
+                    <img id="AboutUs" src="AboutUs(2).png">
+                </footer>
             </div>
             
-
-            <footer>
-                <span>CopyRight 2020 HuaCL,VanPCA,Tou</span>
-            </footer>
+            
         </body>
         <script src="index.js"></script>
+        <script src="node_modules/animejs/lib/anime.min.js"></script>
+        
+
+        <script src="./node_modules/fullpage.js/dist/fullpage.js"></script>
         <noscript id="noscript">WARNING: This page requires a JavaScript-enabled browser.</p></noscript>
     </html>
